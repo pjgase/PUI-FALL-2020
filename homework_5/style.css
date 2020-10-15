@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Economica', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Background Image */
+
+body {
+    position: relative;
+}
+
+body::after {
+    content: '';
+    background-image: url(./images/mountain-lake.png);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+/* Styling for General Classes */
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+/* ClearFix Hack for Floated Elements */
+.clearfix::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Grid Setup */
+body {
+    display: grid;
+    height: 1000px;
+    grid-template-areas: 
+        'header-area'
+        'main-area'
+        'footer-area';
+    grid-template-rows: 1fr 10fr 1fr;
+    gap: 10px;
+}
+
+header{
+    background-color: #152D20;
+    grid-area: header-area;
+}
+
+main{
+    grid-area: main-area;
+    display: grid;
+    grid-template-areas:
+        'title-area'
+        'content-area';
+    grid-template-rows: 1.5fr 8.5fr;
+    gap: 10px;
+    margin: 0 100px;
+}
+
+.page-title{
+    grid-area: title-area;
+    /* background-color: red; */
+    display: flex;
+}
+
+.page-content{
+    grid-area: content-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.page-intro{
+    /* background-color: pink; */
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.page-subcontent{
+    flex: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.feature{
+    background-color: #152d20;
+    flex: 2;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.explore{
+    background-color: #152d20;
+    border-radius: 5px;
+    flex: 1;
+}
+
+footer{
+    /* background-color: green; */
+    grid-area: footer-area;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 5px;
+}
+
+/* Navigation Bar Style */
+
+nav{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-title, .logo-image{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.logo-title{
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.nav-links{
+    display: flex;
+    flex: 0.5;
+}
+
+.nav-links li{
+    list-style: none;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links li a{
+    flex: 1; 
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-icon{
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+.link-text{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+nav .nav-links a::after {
+    content:'';
+    display: block;
+    height: 3px;
+    background-color: #48946a;
+    opacity: 0.75;
+    position: relative; 
+    top: 5px; 
+    width: 0%;
+    transition: all ease 150ms;
+}
+
+nav .nav-links a:hover::after {
+    width: 100%
+}
+
+/* Page Intro Style */
+
+.page-title{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+    color: #000000;
+}
+
+/* Home Page Content Style */
+.page-content .page-intro{
+    font-size: 24px;
+    color: #000000;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Featured Product Style */
+/* Creating a Grid Within Feature Product */
+.feature{
+    display: grid;
+    grid-template-areas: 
+    'feature-title-area feature-title-area .'
+    'image-area options-area buy-area';
+    grid-template-rows: 1fr 7fr;
+    grid-template-columns: 2.5fr 2fr 2fr;
+}
+
+.feature h2{
+    grid-area: feature-title-area;
+    /* background-color: red; */
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 36px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+
+}
+
+.product-description{
+    grid-area: image-area;
+    background-color:#FFFFFF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.product-description a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-description h3{
+    font-size: 30px;
+    color: #000000;
+}
+
+.product-options{
+    grid-area: options-area;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table{
+    margin: 50px auto;
+    text-align: center;
+    height: 60%;
+}
+
+table td{
+    opacity: 0.6;
+    transition: all ease 150ms;
+}
+
+table td:hover{
+    opacity: 1;
+}
+
+.strawberry{
+    color: #FF0000;
+}
+
+.crazyberry{
+    color: #0EC44C;
+}
+
+.blackberry{
+    color: #170041;
+}
+
+.fire-orange{
+    color: #E06119;
+}
+
+.shopping-qty{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.shopping-qty label{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.shopping-qty input{
+    font-size: 16px;
+    background-color: #f4f4f4;
+    text-align: right;
+}
+
+.shopping-options{
+    grid-area: buy-area;
+    background-color: #ffffff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shopping-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-to-cart{
+    font-size: 28px;
+    background-color: #2E867A;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.buy-now{
+    font-size: 28px;
+    background-color: #ffec38;
+    padding: 20px; 
+    margin-right: 10px;
+}
+
+/* Explore Our Products Style */
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.explore h2{
+    color: #ffffff;
+    font-size: 36px;
+}
+
+/* Footer Style */
+footer a{
+    font-size: 8px;
+    color: #ffffff;
+    opacity: 0.5;
+}
