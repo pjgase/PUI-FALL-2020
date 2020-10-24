@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Muddy Paws Adventure Gear Homepage</title>
+        <meta charset='utf-8'/>
+        <link href='./style.css' rel='stylesheet' type='text/css'>
+        <!-- Add Link to JS Here -->
+    </head>
+    <body>
+        <header>
+            <div class='nav-container clearfix'>
+                <a href='./home.html' class='logo'><img src='./images/paw-icon.svg' alt='logo'><span class='all-caps'>Muddy Paws<br>Adventure Gear</span></a>
+                <nav>
+                    <ul>
+                        <li><a href=''><img src='./images/sign-in-icon.svg'><span>Sign In</span></a></li>
+                        <li><a href=''><img src='./images/about-icon.svg'><span>About</span></a></li>
+                        <li><a href='./products.html'><img src='./images/products-icon small.svg'><span>Products</span></a></li>
+                        <li><a href=''><img src='./images/shopping-cart-icon small.svg'><span>Cart</span></a></li>
+                    </ul>
+                </nav>
+            </div>  
+        </header>
+
+        <main>
+            <!-- Page Intro Section -->
+            <section>
+                <h1 class='page-title'>Welcome to Muddy Paws Adventure Gear!</h1>
+                <p class ='page-text'>
+                    Our company's mission is to help you and your best friend be prepared for the wilderness for any situation.
+                    <br>
+                    Explore our featured products below!
+                </p>
+            </section>
+
+            <!-- Featured Product Section -->
+            <section class='feature-product'>
+                <h2>Featured Product</h2>
+                <!-- Product Name, Image, and Rating-->
+                <div id='feature-product-name'>
+                    <a href='./gps_collar.html'>
+                        <h3>Collar with GPS Tracker</h3>
+                        <img id='feature-image' src='./images/collar.png' alt='Tan Leather Collar for Pet'>
+                        <img class='rating' src='./images/4andhalf-star-rating.svg' alt='4.5 Star Rating'>
+                    </a>
+                </div>
+                <!-- Product Options -->
+                <table class='product-options'> <!-- 8 Rows x 2 Columns -->
+                    <tr>
+                        <td rowspan='2'>
+                            <figure>
+                                <img src='./images/dog-icon.svg'> 
+                                <figcaption>Dog</figcaption>
+                            </figure>
+                        </td>
+                        <td rowspan='2'>
+                            <figure>
+                                <img src='./images/cat-icon.svg'>
+                                <figcaption>Cat</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                    <tr></tr> <!-- First Row Spans Into Second -->
+                    <tr></tr> <!-- Blank Row -->
+                    <tr>
+                        <td>Tiny</td>
+                        <td>Small</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>Large</td>
+                    </tr>
+                    <tr></tr> <!-- Blank Row -->
+                    <tr>
+                        <td class='strawberry'>Strawberry</td>
+                        <td class='crazyberry'>Crazyberry</td>
+                    </tr>
+                    <tr>
+                        <td class='blackberry'>Blackberry</td>
+                        <td class='fire-orange'>Fire Orange</td>
+                    </tr>
+                </table>
+                <!-- Shopping Actions -->
+                <div class='shopping-options'>
+                    <input type='number' id='quantity' name='quantity' min='1' placeholder='(INPUT QTY)' required>
+                    <button class='add-to-cart' type='button'>Add to Cart</button>
+                    <button class='buy-now' type='button'>Buy Now!</button>
+                </div>
+            </section>
+
+            <!-- Explore Products -->
+            <section>
+                <a href='products.html'>
+                    <img src='./images/products-icon large.svg'>
+                    <h2>Explore Our<br>Products</h2>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <a href='https://search.creativecommons.org/photos/f1906eec-f5d5-45e9-8330-a1e184c1f968' target='_blank'>"Mountain Lake by traed mawr" by shallowend is licensed under CC BY-NC-SA 2.0</a>
+        </footer>
+    </body>
+</html>

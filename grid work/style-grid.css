@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Economica', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Background Image */
+/*
+body {
+    position: relative;
+}
+
+body::before {
+    content: '';
+    background-image: url(./images/mountain-lake.png);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+*/
+
+.all-caps {
+    text-transform: uppercase;
+}
+
+/* ClearFix Hack for Floated Elements */
+.clearfix::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+/* Grid Setup */
+body {
+    display: grid;
+    height: 1000px;
+    grid-template-areas: 
+        'header-area'
+        'main-area'
+        'footer-area';
+    grid-template-rows: 1fr 10.5fr 0.5fr;
+    gap: 10px;
+}
+
+header{
+    background-color: blue;
+    border-color: darkblue;
+    grid-area: header-area;
+    display: flex; 
+}
+
+main{
+    grid-area: main-area;
+    display: grid;
+    grid-template-areas:
+        'title-area'
+        'content-area';
+    grid-template-rows: 1.5fr 8.5fr;
+    gap: 10px;
+    margin: 0 100px;
+}
+
+.page-title{
+    grid-area: title-area;
+    background-color: red;
+}
+
+.page-content{
+    grid-area: content-area;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.page-intro{
+    background-color: pink;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.page-subcontent{
+    flex: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.feature{
+    background-color: purple;
+    flex: 2;
+    margin-right: 10px;
+
+}
+
+.explore{
+    background-color: yellow;
+    flex: 1;
+}
+
+footer{
+    background-color: green;
+    border-color: darkgreen;
+    grid-area: footer-area;
+}
+
+
